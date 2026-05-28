@@ -298,7 +298,275 @@
 # print("variable",var1)
 # print("variable",var2)
 
-list = [10,30,30,40,50,60]
-list[4], list[1] = list[1], list[4]
+# list = [10,30,30,40,50,60]
+# list[4], list[1] = list[1], list[4]
 
-print[list]
+# print[list]
+
+#print("hello world")
+#print?("")
+
+
+# row = []
+# for i in range(8):
+#     row.append("WHITE_PAWN")
+
+# row = ["WHITE_PAWN" for i in range(8)]
+
+# print(row)
+# print(squares)
+# twos = [2 ** index for index in range(8)]
+# print(twos)
+# squares = [x ** 2 for x in range(1,12)]
+
+# odds = [f'{element} is odd number!'for element in squares if element % 2 != 0]
+# print(odds)
+board = []
+# for i in range(8):
+#     row = ["EMPTY" for i in range(8)]
+#     board.append(row)
+
+# # for element in board:
+# #     print(element)
+# print(len(board))
+
+# print(board[0][5])
+# print("____________________________-__")
+# board[0][0] = "ROOK"
+# board[0][7] = "ROOK"
+# board[7][0] = "ROOK"
+# board[7][7] = "ROOK"
+
+# for element in board:
+#     print(element)
+
+# print("____________________________-__")
+# board[0][1] = "KNIGHT"
+# board[0][6] = "KNIGHTK"
+# board[7][1] = "KNIGHT"
+# board[7][6] = "KNIGHT"
+
+# print("____________________________-__")
+# for element in board:
+#     print(element)
+# temps = [[0.0 for h in range(24)] for d in range(31)]
+
+# temp1 = 7
+# temp2 = 37
+# count = 0
+
+# for days in temps:
+#         if count == 0:
+#             days[11] = temp1
+#             count = 1
+
+#         else:
+#             days[11] = temp2
+#             count = 0
+
+# for element in temps:
+#       print(element)
+
+# total = 0.0
+# for day in temps:
+#       total += day[11]
+# average = total / 31
+# print("average temp at noon:,",average)
+
+# highest = -100.0
+# for day in temps:
+#       for temp in day:
+#             if temp > highest:
+#                   highest = temp
+
+# print("the highest temp is",highest)
+
+# lowest = -0.0
+# for day in temps:
+#       for temp in day:
+#             if temp < lowest:
+#                   lowest = temp
+
+# print("the lowest temp is",lowest)
+
+# hot_days = 0
+# for day in temps:
+#       if day [11] > 20.0:
+#             hot_days += 1
+
+# print(hot_days,"days were hot days in the month.")
+
+# rooms = [[[False for r in range(20)]for f in range(15)]for t in range(3)]
+
+# print(rooms)
+
+# rooms[1][9][14] = True
+# rooms[1][9][1] = True
+
+# vacancy = 0
+# for room_number in range(20):
+#       if not rooms[1][9][room_number]:
+#             vacancy +=1
+# print("vacancy in 3rd 15th floor of 3rd building",vacancy)
+
+
+# tuple_1 = (1,2,3,4)
+# for elem in tuple_1:
+#     print(elem)
+
+#     tuple_2 = (1,2,3,4)
+#     print(5 in tuple_2)
+#     print(5 is not in tuple_2)
+
+#     tuple_3 = (1,2,3,4)
+#     print(len())
+
+# my_tuple = tuple((1,2,"string"))
+# print(my_tuple)
+# print(type(my_tuple))
+
+# my_list = [2,3,4]
+# print(my_list)
+# print(type(my_list))
+# tup = tuple(my_list)
+# print(tup)
+# print(type(tup))
+
+# var = 123
+
+# t1 = (1, )
+# t2 = (3, )
+# t3 = (3,var)
+
+# t1,t2,t3 = t2,t3,t1
+# print(t1,t2,t3)
+# print(type(t1),type(t2),type(t3))
+
+# dictionary = {
+    
+# "dog": "chin",
+# "cat": "chat",
+# "horse":"cheval"
+
+# }
+# ph_num = {"boss":8437934822, "suzy": 894377323 }
+# empty_dictionary = {}
+
+# print(dictionary)
+# print(type(dictionary))
+# print(ph_num)
+# print(type(ph_num))
+# print(empty_dictionary)
+# print(type(empty_dictionary))
+
+# print(dictionary['cat'])
+# print(ph_num['suzy'])
+
+# words = ['cat','lion','horse']
+
+# for word in words:
+#     if word in dictionary:
+#         print(word, "-->", dictionary[word])
+#     else:
+#         print("___",word, " is not in dictionary", "___")
+
+# print(dictionary.keys())
+# for key in dictionary.keys():
+#     print(key, "-->", dictionary[key])
+
+#     print(dictionary.items)
+
+# for key, value in dictionary.items():
+#     print(key, "-->", value)
+
+# for value in dictionary.values():
+#     print(value)
+
+# pol_eng_dictionary = {
+#     "zamek": "castle",
+#     "woda":"water",
+#     "gleba": "soil"
+#     }
+# print("pol_eng_dictionary", pol_eng_dictionary)
+# copy_dictionary = pol_eng_dictionary.copy()
+# print("copy dictionary" , copy_dictionary)
+
+# pol_eng_dictionary["zamek"] = "THALA"
+# item = pol_eng_dictionary["zamek"]
+# print(item)
+
+# pol_eng_dictionary["woda"] = "IS"
+# item = pol_eng_dictionary["woda"]
+# print(item)
+# pol_eng_dictionary["gleba"] = "GOAT"
+# item = pol_eng_dictionary["gleba"]
+# print(item)
+
+# phonebook = {}
+# print(phonebook)
+# phonebook["adam"] = 78378346836
+# print(phonebook)
+
+# del phonebook["adam"]
+# print(phonebook)
+
+# pol_eng_dictionary = {"kwait": "flower"}
+
+# pol_eng_dictionary.update(
+#     {
+#         "gleba": "soil"
+#     }
+
+# )
+# print(pol_eng_dictionary)
+# pol_eng_dictionary.popitem()
+# print(len(pol_eng_dictionary))
+
+# if "zamik" in pol_eng_dictionary:
+#     print("yes it is present")
+
+# else:
+#     print("not present")
+
+# if "bihari" in pol_eng_dictionary:
+#     print("yes it is present")
+
+# else:
+#     print("not present")
+
+# print(pol_eng_dictionary)
+# print(len(pol_eng_dictionary))
+
+# del pol_eng_dictionary["zamek"]
+# print(pol_eng_dictionary)
+# print(len(pol_eng_dictionary))
+
+# pol_eng_dictionary.clear()
+# print(pol_eng_dictionary)
+# print(len(pol_eng_dictionary))
+
+# del pol_eng_dictionary
+# print(pol_eng_dictionary)
+
+sd = {}
+
+while True:
+    a = input("enter student name :")
+    if a == "":
+        break
+
+    b = int(input(f"Enter ${a}'s score"))
+    if b not in range(1,11):
+        break
+    if a in sd:
+        sd[a] += (b, )
+    else:
+        sd[a] = (b, )
+
+print(sd)
+
+for a, mark in sd.items():
+    sum = 0
+    for m in mark:
+        sum += m
+    print(a,"-->",sum/len(mark))
