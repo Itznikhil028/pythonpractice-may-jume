@@ -548,25 +548,66 @@ board = []
 # del pol_eng_dictionary
 # print(pol_eng_dictionary)
 
-sd = {}
+# sd = {}
 
-while True:
-    a = input("enter student name :")
-    if a == "":
-        break
+# while True:
+#     a = input("enter student name :")
+#     if a == "":
+#         break
 
-    b = int(input(f"Enter ${a}'s score"))
-    if b not in range(1,11):
-        break
-    if a in sd:
-        sd[a] += (b, )
-    else:
-        sd[a] = (b, )
+#     b = int(input(f"Enter ${a}'s score"))
+#     if b not in range(1,11):
+#         break
+#     if a in sd:
+#         sd[a] += (b, )
+#     else:
+#         sd[a] = (b, )
 
-print(sd)
+# print(sd)
 
-for a, mark in sd.items():
-    sum = 0
-    for m in mark:
-        sum += m
-    print(a,"-->",sum/len(mark))
+# for a, mark in sd.items():
+#     sum = 0
+#     for m in mark:
+#         sum += m
+#     print(a,"-->",sum/len(mark))
+
+
+# class thisismyfirstclass:
+#     name = "Nikhil"
+#     age = 19
+
+#     def getname(self):
+#         print(self.name)
+
+# firstobject = thisismyfirstclass()
+# print(firstobject)
+
+# firstobject.getname()
+# print(firstobject.name)
+
+
+class student:
+
+    def __init__(self, name, age , gender, grade):
+
+        self.name = name
+        self.age = age
+        self.gender = gender
+        self.grade = grade
+
+    def printdetails(self):
+        print("name:", self.name)
+        print("age:", self.age)
+        print("gender:", self.gender)
+        print("grade:", self.grade)
+self = student("bihari ji", 20, "Male", "10th")
+print(self)
+# self.name = "Bihari ji"
+# self.age = 20
+# self.gender = "Male"
+# self.grade = "12th"
+self.printdetails()
+# print(self.name)
+# print(self.age)
+# print(self.gender)
+# print(self.grade)
