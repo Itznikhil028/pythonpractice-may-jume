@@ -121,5 +121,42 @@ b=2
 #     print("Spathiphyllum! Not",plant + "!")
 
 
-for temp in range(1, 7):
-    print(str(temp)*temp)
+# for temp in range(1, 7):
+#     print(str(temp)*temp)
+
+                                          # ASSIGNMENT 2 
+                                        #   /// QUESTION 1 ///
+                                        
+# - Write a program that utilizes the concept of conditional execution, takes a string as input, and:
+# 1. prints the sentence "Yes - Spathiphyllum is the best plant ever!" to the screen 
+# 2. ⁠if the inputted string is "Spathiphyllum" (upper-case)
+# prints "No, I want a big Spathiphyllum!" 
+# 3. if the inputted string is "spathiphyllum" (lower-case)
+# prints "Spathiphyllum! Not [input]!" otherwise. Note: [input] is the string taken as input.
+
+# 1. Accept the floating-point value for income
+income = float(input("Enter the annual income in thalers: "))
+
+# Initialize the tax variable
+tax = 0.0
+
+# Calculate the tax based on the rules
+if income <= 85528:
+    # Rule 1: 18% of the income minus 556 thalers and 2 cents
+    tax = (income * 0.18) - 556.02
+else:
+    # Rule 2: 14,839 thalers and 2 cents + 32% of the surplus over 85,528
+    surplus = income - 85528
+    tax = 14839.02 + (surplus * 0.32)
+
+# Note: If the calculated tax is less than zero, it means no tax at all
+if tax < 0:
+    tax = 0.0
+
+# 2. Round the calculated tax to full thalers
+tax = round(tax)
+
+# Print the final result
+print(f"The calculated tax is: {tax} thalers")
+
+

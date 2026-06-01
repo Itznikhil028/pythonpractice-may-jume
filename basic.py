@@ -586,28 +586,49 @@ board = []
 # print(firstobject.name)
 
 
-class student:
+# class student:
 
-    def __init__(self, name, age , gender, grade):
+#     def __init__(self, name, age , gender, grade):
 
-        self.name = name
-        self.age = age
-        self.gender = gender
-        self.grade = grade
+#         self.name = name
+#         self.age = age
+#         self.gender = gender
+#         self.grade = grade
 
-    def printdetails(self):
-        print("name:", self.name)
-        print("age:", self.age)
-        print("gender:", self.gender)
-        print("grade:", self.grade)
-self = student("bihari ji", 20, "Male", "10th")
-print(self)
-# self.name = "Bihari ji"
-# self.age = 20
-# self.gender = "Male"
-# self.grade = "12th"
-self.printdetails()
-# print(self.name)
-# print(self.age)
-# print(self.gender)
-# print(self.grade)
+#     def printdetails(self):
+#         print("name:", self.name)
+#         print("age:", self.age)
+#         print("gender:", self.gender)
+#         print("grade:", self.grade)
+# self = student("bihari ji", 20, "Male", "10th")
+# print(self)
+# # self.name = "Bihari ji"
+# # self.age = 20
+# # self.gender = "Male"
+# # self.grade = "12th"
+# self.printdetails()
+# # print(self.name)
+# # print(self.age)
+# # print(self.gender)
+# # print(self.grade)
+
+
+
+class ExampleClass:
+    def __init__(self,val = 1):
+        self.first = val
+
+    def set_second(self, val):
+        self.second = val 
+
+example_object_1 = ExampleClass()
+example_object_2 = ExampleClass(2)
+example_object_2.set_second(3)
+example_object_3 = ExampleClass(4)
+example_object_3.third = 5 
+
+print(example_object_1)
+
+print(example_object_1.__dict__)
+print(example_object_2.__dict__)
+print(example_object_3.__dict__)
