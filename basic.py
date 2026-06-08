@@ -693,44 +693,179 @@ board = []
 # obj = Teshuji()
 # print(obj.supVar))
 
-class Super:
-    def __init__(self):
-        self.supVar = 11 
-class Sub(Super):
-    def __init__(self):
-        super() . __init__ ()
-        self.subVar = 12
+# class Super:
+#     def __init__(self):
+#         self.supVar = 11 
+# class Sub(Super):
+#     def __init__(self):
+#         super() . __init__ ()
+#         self.subVar = 12
 
-obj = Sub()
-print(obj.subVar)
-print(obj.supVar)
+# obj = Sub()
+# print(obj.subVar)
+# print(obj.supVar)
 
-class Level1:
-    variable_1 = 100
-    def __init__(self):
-        self.var_1 = 101
-    def fun_1(self):
-        return 102
+# class Level1:
+#     variable_1 = 100
+#     def __init__(self):
+#         self.var_1 = 101
+#     def fun_1(self):
+#         return 102
     
-class Level2(Level1):
-    variable_2 = 200
-    def __init__(self):
-        super().__init__()
-        self.var_2 = 201
+# class Level2(Level1):
+#     variable_2 = 200
+#     def __init__(self):
+#         super().__init__()
+#         self.var_2 = 201
 
-    def fun_2(self):
-        return 202
-class Level3(Level2):
-    variable_3 = 300
-    def __init__(self):
-        super().__init__()
-        self.var_3 = 301
+#     def fun_2(self):
+#         return 202
+# class Level3(Level2):
+#     variable_3 = 300
+#     def __init__(self):
+#         super().__init__()
+#         self.var_3 = 301
 
-    def fun_3(self):
-        return 302
+#     def fun_3(self):
+#         return 302
     
-obj = Level3()
-print(obj.variable_1, obj.var_1, obj.fun_1())
-print(obj.variable_2, obj.var_2, obj.fun_2())
-print(obj.variable_3, obj.var_3, obj.fun_3())
+# obj = Level3()
+# print(obj.variable_1, obj.var_1, obj.fun_1())
+# print(obj.variable_2, obj.var_2, obj.fun_2())
+# print(obj.variable_3, obj.var_3, obj.fun_3())
 
+
+
+# class Exampleclass:
+#     counter = 0
+#     def __init__(self, val = 1):
+#         self.__first = val
+#         Exampleclass.counter += 1
+
+# example_objwct_1 = Exampleclass()
+# example_objwct_2 = Exampleclass(2)
+# example_objwct_3 = Exampleclass(4)
+
+
+# print(example_objwct_1.__dict__, example_objwct_1.counter)
+# print(example_objwct_2.__dict__, example_objwct_2.counter)
+# print(example_objwct_3.__dict__, example_objwct_3.counter)
+
+
+
+# class Exampleclass:
+#     counter = 0
+#     def __init__(self, val = 1):
+#        # self.__first = val
+#         Exampleclass.counter += 1
+#         if val % 2 != 0:
+#             self.a = 1
+#         else:
+#             self.b = 1
+
+# example_objwct = Exampleclass(3)
+# try:
+#     print("a=",example_objwct.a)
+# except AttributeError:
+#     try:
+#         print("b=",example_objwct.b)
+#     except AttributeError:
+#         print("The error has occured ! silently passing it!")
+
+
+# class Exampleclass:
+#     counter = 0
+#     def __init__(self, val = 1):
+#        # self.__first = val
+#         Exampleclass.counter += 1
+#         if val % 2 != 0:
+#             self.a = 1
+#         else:
+#             self.b = 1
+
+
+
+# example_object = Exampleclass(3)
+
+# if hasattr(example_object, 'a'):
+#     print("a =", example_object.a)
+
+# if hasattr(example_object, 'b'):
+#     print("b =", example_object.b)
+
+
+# print(hasattr(Exampleclass, 'b'))
+# print(hasattr(Exampleclass, 'a'))
+
+# class python:
+#     population = 1
+#     victims = 0
+#     def __init__(self):
+#         self.length_ft = 3
+#         self.__venemous = False
+
+# myobj = python()
+# print("myobj.population", myobj.population)
+# print("myobj.victims", myobj.victims)
+# print("myobj.length.ft", myobj.length_ft)
+# print("myobj__venemous", myobj._python__venemous)
+# #print("myobj.venemous", myobj.venemous)
+# print(hasattr(myobj ,'constructor'))
+
+
+class Classy:
+    def visible(self):
+        print("visible")
+
+    def __hidden(self):
+        print("hidden")
+
+obj = Classy()
+obj.visible()
+try:
+    obj. __hidden()
+except:
+    print("failed")
+    obj._Classy__hidden()
+print(type(obj))
+print(type(obj).__name__)
+
+
+class vehicle:
+    pass
+
+class landvehicle(vehicle):
+    pass
+
+class trackedvehicle(landvehicle):
+    pass
+
+my_vehicle = vehicle()
+my_land_vehicle = landvehicle()
+my_tracked_vehicle = trackedvehicle()
+
+for obj in [my_vehicle, my_land_vehicle, my_tracked_vehicle]:
+    for cls in [vehicle, landvehicle , trackedvehicle]:
+        print(isinstance(obj, cls),end="\t")
+    print()
+
+
+class Simpelclass:
+    def __init__(self, val):
+        self.val = val
+
+object_1 = Simpelclass(0)
+object_2 = Simpelclass(2)
+object_3 = object_1
+object_3.val += 1
+
+print(object_1 is object_2)
+print(object_2 is object_3)
+print(object_3 is object_1)
+print(object_1.val,object_2.val, object_3.val)
+
+string_1 = "Marry had a little "
+string_2 = "Marry had a little lamb" 
+string_1 += "lamb"     
+
+print(string_1 == string_2, string_1 is string_2)
