@@ -813,59 +813,127 @@ board = []
 # print(hasattr(myobj ,'constructor'))
 
 
-class Classy:
-    def visible(self):
-        print("visible")
+# # 
+# class Super:
+#     def __init__(self, name):
+#         self.name = name
 
-    def __hidden(self):
-        print("hidden")
+#     def __str__(self):
+#         return "My name is " + self.name + "."
+    
+# class Sub(Super):
+#     def __init__(self, name):
+#         super().__init__(name)
 
-obj = Classy()
-obj.visible()
+# obj = Sub("Andy")
+# print(obj)        
+
+
+
+# class Supera:
+#     var_a = 10
+#     def fun_a(self):
+#         return 11
+    
+# class SuperB:
+#     var_b = 20
+#     def fun_b(self):
+#         return 21
+# class Sub(Supera, SuperB):
+#     pass
+
+# obj = Sub()
+# print(obj.var_a, obj.fun_a())
+# print(obj.var_b, obj.fun_b())
+
+
+
+# class level1:
+#     var = 100
+#     def fun(self):
+#         return 101
+
+# class level2(level1):
+#     var = 200
+#     def fun(self):
+#         return 201
+    
+# class level3(level2):
+#     pass
+
+# obj = level3()
+# print(obj.var, obj.fun())
+
+
+# class left:
+#     var = "L"
+#     var_left = "LL"
+#     def fun(self):
+#         return "left"
+
+# class right:
+#     var = "R"
+#     var_right = "RR"
+#     def fun(self):
+#         return "right"
+    
+# class sub(left, right):
+#     pass
+# obj = sub()
+
+# print(obj.var, obj.var_left, obj.var_right, obj.fun())
+
+
+# class One:
+#     def do_it(self):
+#         print("do_it from One")
+
+#     def doanything(self):
+#         self.do_it()
+
+# class Two(One):
+#     def do_it(self):
+#         print("do it from two")
+
+# one = One()
+# two = Two()
+# one.doanything()
+# two.doanything()
+
+
+
+def reciprocal(n):
+    try:
+        n = 1 / n
+    except ZeroDivisionError:
+        print("Division Failed")
+        n = None
+    else:
+        print("Everything went fine")
+    finally:
+        print("its time to say goodbye")
+        
+    
+print (" ____")
+print("reciprocal(2)", reciprocal(2))
+print (" ____")
+print("reciprocal(0)", reciprocal(0))
+print (" ____")
+
 try:
-    obj. __hidden()
-except:
-    print("failed")
-    obj._Classy__hidden()
-print(type(obj))
-print(type(obj).__name__)
+    i = int("Hello!")
+except Exception as e:
+    print(e)
+    print(e.__str__())
 
 
-class vehicle:
+class MyZeroDivisionError (ZeroDivisionError):
     pass
 
-class landvehicle(vehicle):
-    pass
-
-class trackedvehicle(landvehicle):
-    pass
-
-my_vehicle = vehicle()
-my_land_vehicle = landvehicle()
-my_tracked_vehicle = trackedvehicle()
-
-for obj in [my_vehicle, my_land_vehicle, my_tracked_vehicle]:
-    for cls in [vehicle, landvehicle , trackedvehicle]:
-        print(isinstance(obj, cls),end="\t")
-    print()
-
-
-class Simpelclass:
-    def __init__(self, val):
-        self.val = val
-
-object_1 = Simpelclass(0)
-object_2 = Simpelclass(2)
-object_3 = object_1
-object_3.val += 1
-
-print(object_1 is object_2)
-print(object_2 is object_3)
-print(object_3 is object_1)
-print(object_1.val,object_2.val, object_3.val)
-
-string_1 = "Marry had a little "
-string_2 = "Marry had a little lamb" 
-string_1 += "lamb"     
-
-print(string_1 == string_2, string_1 is string_2)
+def do_the_division(mine):
+    if mine:
+        raise MyZeroDivisionError("some worse news")
+    else:
+        raise ZeroDivisionError("somne bad news")
+    
+do_the_division(False)
