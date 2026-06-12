@@ -902,38 +902,40 @@ board = []
 
 
 
-def reciprocal(n):
-    try:
-        n = 1 / n
-    except ZeroDivisionError:
-        print("Division Failed")
-        n = None
-    else:
-        print("Everything went fine")
-    finally:
-        print("its time to say goodbye")
+# def reciprocal(n):
+#     try:
+#         n = 1 / n
+#     except ZeroDivisionError:
+#         print("Division Failed")
+#         n = None
+#     else:
+#         print("Everything went fine")
+#     finally:
+#         print("its time to say goodbye")
         
     
-print (" ____")
-print("reciprocal(2)", reciprocal(2))
-print (" ____")
-print("reciprocal(0)", reciprocal(0))
-print (" ____")
+# print (" ____")
+# print("reciprocal(2)", reciprocal(2))
+# print (" ____")
+# print("reciprocal(0)", reciprocal(0))
+# print (" ____")
 
-try:
-    i = int("Hello!")
-except Exception as e:
-    print(e)
-    print(e.__str__())
+# try:
+#     i = int("Hello!")
+# except Exception as e:
+#     print(e)
+#     print(e.__str__())
 
 
-class MyZeroDivisionError (ZeroDivisionError):
-    pass
+# class MyZeroDivisionError (ZeroDivisionError):
+#     pass
 
-def do_the_division(mine):
-    if mine:
-        raise MyZeroDivisionError("some worse news")
-    else:
-        raise ZeroDivisionError("somne bad news")
+# def do_the_division(mine):
+#     if mine:
+#         raise MyZeroDivisionError("some worse news")
+#     else:
+#         raise ZeroDivisionError("somne bad news")
     
-do_the_division(False)
+# do_the_division(False)
+
+

@@ -1,0 +1,4 @@
+Rahul Sharma,85,Bhopal
+Priya Verma,92,indore
+Amit Kumar,90,Jabalpur
+Sneha Joshi,88,Bhopal
