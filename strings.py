@@ -164,24 +164,54 @@ import numpy as np
 # print(np.std(marks_2d))
 
 
-arr = np.array([10,50,78,69,84.58,99,84])
-print(arr[arr>70])
+# arr = np.array([10,50,78,69,84.58,99,84])
+# print(arr[arr>70])
 
 # panda ji
 
 import pandas as pd
 # print(pd.__version__)
 
-data = {
-    'Name': ['pari','teshu','harsh','kunal','mayur'],
-    'Age':  [20, 21, 23, 24, 40],
-    'Marks': [90,59,80,98,77],
-    'city': ['Kashrawad','Patna','bihar','indore','pune'],
+# data = {
+#     'Name': ['pari','teshu','harsh','kunal','mayur'],
+#     'Age':  [20, 21, 23, 24, 40],
+#     'Marks': [90,59,80,98,77],
+#     'city': ['Kashrawad','Patna','indore','indore','Patna'],
 
-}
-df = pd.DataFrame(data)
-print(df)
-print(df.shape)
-print(df.head(3))
-print(df.dtypes)
-print(df.describe())
+# }
+# df = pd.DataFrame(data)
+# print(df)
+# print(df.shape)
+# print(df.head(3))
+# print(df.dtypes)
+# print(df.describe())
+
+# print("df['Name']: \n", df['Name'])
+# print(df[['Name','Marks']])
+# print(df[df['Marks'] >= 85])
+# print(df[df['city'] == 'indore'])
+
+# print(df[(df['Marks']>=80) & (df['city']=='indore')])
+
+# def get_grade(x):
+#     if x >= 90:
+#         return 'A'
+#     elif x >= 75:
+#         return 'b'
+#     else:
+#         return 'c'
+    
+# city_avg = df.groupby('city')['Marks'].mean()
+# print(city_avg)
+
+df2 = pd.read_csv('students.csv')
+print(df2)
+df2['name'] = df2['name'].str.strip()
+print(df2)
+df2['city'] = df2['city'].str.strip()
+df2['marks'] = df2['marks'].str.strip('#')
+
+df2['grade'] = df2['grade'].str.strip('@')
+df2.to_csv('clean_output.csv', index=False )
+
+
