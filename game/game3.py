@@ -31,18 +31,18 @@ class TruthAndDareGame:
     def __init__(self):
         self.players = []
         self.original_truths = [
-            "Group mein sabse zyada jhooth kaun bolta hai?",
-            "Aapka sabse bada aur embarrassing secret kya hai?",
-            "Agar aapko is room mein se kisi ko date karna ho, toh kaun hoga?",
-            "Aapne last time kab aur kis baat par jhooth bola tha?",
-            "Kya aapne kabhi school/college mein cheating ki hai? Pakde gaye the?"
+            "Who tells the most lies in this group?",
+            "What is your biggest and most embarrassing secret?",
+            "If you had to date someone in this room, who would it be?",
+            "When was the last time you lied, and what was it about?",
+            "Have you ever cheated in school or college? Did you get caught?"
         ]
         self.original_dares = [
-            "Class ke samne khade hokar kisi teacher ki acting karke dikhao!",
-            "Apne phone ka last WhatsApp chat khol kar sabko unke messages padhwao.",
-            "{} ko dekho aur ek romantic gana gao!",
-            "Agle 2 rounds tak aapko har sentence ke baad 'Moo' bolna padega.",
-            "{} ke pair chhuo aur bolo 'Aap hi mere bhagwan ho'!"
+            "Stand up and mimic any of your teachers in front of the class!",
+            "Open your last WhatsApp chat and read the messages out loud to everyone.",
+            "Look at {} and sing a romantic song!",
+            "For the next 2 rounds, you must say 'Moo' at the end of every sentence.",
+            "Touch the feet of {} and say 'You are my savior'!"
         ]
         self.truths = list(self.original_truths)
         self.dares = list(self.original_dares)
@@ -60,7 +60,7 @@ class TruthAndDareGame:
  |_   _| __ _   _  _ _| |__  | |__    ( _ )  |  _ \\   __ _  _ __  ___ 
    | |  '__/ _` | | | | __| | '_ \\   / _ \\  | | | | / _` || '__|/ _ \\
    | | |  | (_| | |_| | |_  | | | | | (_) | | |_| || (_| || |  |  __/
-   |_|___\__,_|\\__,_|\\__| |_| |_|  \\___/  |____/  \\__,_||_|   \\___|
+   |_|___\\__,_|\\__,_|\\__| |_| |_|  \\___/  |____/  \\__,_||_|   \\___|
         {Colors.ENDC}"""
         print(art)
 
@@ -70,21 +70,21 @@ class TruthAndDareGame:
         
         while True:
             try:
-                num = int(input(f"{Colors.BOLD}Kitne log khel rahe hain? (Min 2): {Colors.ENDC}"))
+                num = int(input(f"{Colors.BOLD}How many players are playing? (Min 2): {Colors.ENDC}"))
                 if num >= 2:
                     break
-                print(f"{Colors.FAIL}Kam se kam 2 players chahiye bhai!{Colors.ENDC}")
+                print(f"{Colors.FAIL}At least 2 players are required!{Colors.ENDC}")
             except ValueError:
-                print(f"{Colors.FAIL}Valid number daalo yaara.{Colors.ENDC}")
+                print(f"{Colors.FAIL}Please enter a valid number.{Colors.ENDC}")
 
         for i in range(num):
             while True:
-                name = input(f"Player {i+1} ka naam: ").strip()
+                name = input(f"Enter name for Player {i+1}: ").strip()
                 if name:
                     # Player object banakar list mein daal rahe hain
                     self.players.append(Player(name))
                     break
-                print(f"{Colors.FAIL}Naam khali nahi ho sakta!{Colors.ENDC}")
+                print(f"{Colors.FAIL}Player name cannot be empty!{Colors.ENDC}")
 
     def show_scoreboard(self):
         print(f"\n{Colors.BOLD}--- 📊 CURRENT SCOREBOARD ---{Colors.ENDC}")
@@ -93,7 +93,7 @@ class TruthAndDareGame:
         print("-----------------------------\n")
 
     def spin_bottle(self):
-        print("🍾 Bottle ghum rahi hai...")
+        print("🍾 Bottle spinning...")
         for _ in range(4):
             time.sleep(0.4)
             print(".", end="", flush=True)
@@ -108,9 +108,9 @@ class TruthAndDareGame:
 
             current_player = random.choice(self.players)
             self.play_beep()
-            print(f"🎯 Target Locked! Baari hai: {Colors.BOLD}{Colors.FAIL}{current_player.name.upper()}{Colors.ENDC} ki!")
+            print(f"🎯 Target Locked! It is turn of: {Colors.BOLD}{Colors.FAIL}{current_player.name.upper()}{Colors.ENDC}!")
 
-            choice = input(f"\n{Colors.CYAN}(T)ruth{Colors.ENDC} ya {Colors.FAIL}(D)are{Colors.ENDC}? [Ya 'quit' band karne ke liye]: ").lower().strip()
+            choice = input(f"\nChoose {Colors.CYAN}(T)ruth{Colors.ENDC} or {Colors.FAIL}(D)are{Colors.ENDC}? [Or type 'quit' to exit]: ").lower().strip()
 
             if choice == 'quit':
                 break
@@ -128,21 +128,21 @@ class TruthAndDareGame:
                 
                 if "{}" in task:
                     others = [p.name for p in self.players if p.name != current_player.name]
-                    target = random.choice(others) if others else "kisi dost"
+                    target = random.choice(others) if others else "a friend"
                     task = task.format(target)
                 print(f"\n{Colors.FAIL}⚡ DARE FOR {current_player.name.upper()}:{Colors.ENDC}\n👉 {Colors.BOLD}{Colors.WARNING}{task}{Colors.ENDC}")
             else:
-                print(f"{Colors.WARNING}Galat input! Round skipped.{Colors.ENDC}")
+                print(f"{Colors.WARNING}Invalid input! Round skipped.{Colors.ENDC}")
                 time.sleep(1.5)
                 continue
 
             print("\n---------------------------------------------")
-            status = input("Task poora kiya? (Y)es / (N)o: ").lower().strip()
+            status = input("Did you complete the task? (Y)es / (N)o: ").lower().strip()
             if status in ['y', 'yes']:
                 print(f"🎉 {Colors.GREEN}+10 Points!{Colors.ENDC}")
                 current_player.add_points(10)
             else:
-                print(f"👎 {Colors.FAIL}-5 Points! Darpok!{Colors.ENDC}")
+                print(f"👎 {Colors.FAIL}-5 Points! Sneaky!{Colors.ENDC}")
                 current_player.deduct_points(5)
 
             input(f"\nPress Enter for next round...")
@@ -157,7 +157,7 @@ class TruthAndDareGame:
         
         # Winner nikalne ka logic object list se
         winner = max(self.players, key=lambda p: p.score)
-        print(f"🏆 Sabse bada khiladi: {Colors.GREEN}{Colors.BOLD}{winner.name.upper()}{Colors.ENDC} ({winner.score} Points)!")
+        print(f"🏆 The ultimate player is: {Colors.GREEN}{Colors.BOLD}{winner.name.upper()}{Colors.ENDC} ({winner.score} Points)!")
 
 # Game Start Karne Ka Standard Tareeka
 if __name__ == "__main__":
