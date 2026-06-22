@@ -16,4 +16,3 @@ print(f'95 % od people: {mean_h-2*std_h:.0f}cm to {mean_h+2*std_h:.0f}cm')
 print(f'99.7 % od people: {mean_h-3*std_h:.0f}cm to {mean_h+3*std_h:.0f}cm')
 
 
-
