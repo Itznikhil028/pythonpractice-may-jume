@@ -1,0 +1,26 @@
+Name,Age,City,Math,Science,English,History,Art
+Student_1,20,Houston,67.0,86.0,99,46,83
+Student_2,20,Miami,47.0,86.0,74,53,56
+Student_3,19,Chicago,75.0,89.0,79,43,41
+Student_4,21,Miami,,93.0,81,43,93
+Student_5,21,Miami,68.0,57.0,65,83,73
+Student_6,20,Los Angeles,49.0,75.0,53,70,87
+Student_7,21,Chicago,54.0,47.0,53,62,99
+Student_8,21,Chicago,96.0,79.0,60,55,84
+Student_9,18,Chicago,57.0,86.0,92,63,65
+Student_10,20,Miami,64.0,99.0,99,99,84
+Student_11,22,Houston,80.0,68.0,54,84,40
+Student_12,20,Chicago,64.0,46.0,48,63,40
+Student_13,22,Miami,83.0,,63,50,90
+Student_14,18,Los Angeles,56.0,47.0,74,74,72
+Student_15,19,Houston,98.0,44.0,81,78,97
+Student_16,21,Los Angeles,80.0,67.0,46,48,47
+Student_17,18,Houston,51.0,73.0,72,87,94
+Student_18,21,Miami,62.0,63.0,76,74,83
+Student_19,19,New York,79.0,61.0,66,74,40
+Student_20,19,Houston,74.0,76.0,86,53,42
+Student_21,18,Los Angeles,40.0,44.0,65,94,53
+Student_22,19,Miami,78.0,66.0,48,54,54
+Student_23,22,Houston,65.0,81.0,99,52,90
+Student_24,19,New York,71.0,78.0,88,91,71
+Student_25,21,New York,43.0,69.0,76,62,78
